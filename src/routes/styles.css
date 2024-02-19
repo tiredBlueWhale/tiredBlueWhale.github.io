@@ -1,0 +1,33 @@
+@import '@fontsource/martian-mono';
+@import '@fontsource/fira-mono';
+@import '@fontsource/audiowide';
+@import '@fontsource/press-start-2p';
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+	html {
+		@apply bg-neutral-950
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	span,
+	a,
+	li {
+		@apply text-white;
+	}
+
+	a {
+		@apply underline;
+	}
+}
