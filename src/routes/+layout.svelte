@@ -3,19 +3,19 @@
 	import { onMount } from 'svelte';
 	import { Header, Footer } from '$lib/components';
 	import { update } from '$lib/hydrated.js';
-	import { onNavigate } from '$app/navigation';
+	// import { onNavigate } from '$app/navigation';
 
 	onMount(update);
-	onNavigate((navigation) => {
-		if (!document.startViewTransition) return;
+	// onNavigate((navigation) => {
+	// 	if (!document.startViewTransition) return;
 
-		return new Promise((resolve) => {
-			document.startViewTransition(async () => {
-				resolve();
-				await navigation.complete;
-			});
-		});
-	});
+	// 	return new Promise((resolve) => {
+	// 		document.startViewTransition(async () => {
+	// 			resolve();
+	// 			await navigation.complete;
+	// 		});
+	// 	});
+	// });
 </script>
 
 <div class="relative flex flex-col min-h-screen">
@@ -26,7 +26,7 @@
 	<Footer />
 </div>
 
-<style>
+<!-- <style>
 	@keyframes fade-in {
 		from {
 			opacity: 0;
@@ -56,4 +56,4 @@
 				300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-down;
 		}
 	}
-</style>
+</style> -->
