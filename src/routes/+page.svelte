@@ -34,7 +34,10 @@
 		</p>
 		<a class="text-base md:text-lg lg:text-xl pb-2 lg:pb-8" href="{base}/stay-inside">Learn More</a>
 		<div class="grow-[.1]" />
-		<Download apple="http" android="asdjfkajfs" />
+		<Download
+			apple="http"
+			android="https://play.google.com/store/apps/details?id=com.tiredbluewhale.stayinside"
+		/>
 		<div class="flex-1 md:grow-[1.6]" />
 		<div class="flex gap-4">
 			<a class="text-sm lg:text-base" href="{base}/stay-inside/privacy">Privacy Policy </a>
