@@ -35,7 +35,7 @@
 		<a class="text-base md:text-lg lg:text-xl pb-2 lg:pb-8" href="{base}/stay-inside">Learn More</a>
 		<div class="grow-[.1]" />
 		<Download
-			apple="http"
+			apple="https://apps.apple.com/us/app/stayinside/id6477404555"
 			android="https://play.google.com/store/apps/details?id=com.tiredbluewhale.stayinside"
 		/>
 		<div class="flex-1 md:grow-[1.6]" />
