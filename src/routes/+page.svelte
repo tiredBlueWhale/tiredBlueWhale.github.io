@@ -26,9 +26,7 @@
 		<h1 class="text-4xl md:text-6xl lg:text-8xl font-bold text-shadow shadow-stay-inside-shadow">
 			Stay Inside
 		</h1>
-		<h2 class="text-lg md:text-xl lg:text-3xl pb-1 lg:pb-4">
-			Fast passed hyper casual mobile game
-		</h2>
+		<h2 class="text-lg md:text-xl lg:text-3xl pb-1 lg:pb-4">Fast paced hyper casual mobile game</h2>
 		<p class="text-base md:text-lg lg:text-xl pb-1 lg:pb-4">
 			The goal is to stay inside the outer circle, which changes speed, size and rythm.
 		</p>
@@ -59,9 +57,7 @@
 		<div class="md:flex-1" />
 		<span class="text-xs md:text-base lg:text-base">Game</span>
 		<h1 class="text-3xl md:text-5xl lg:text-7xl md:pb-1 font-bold">Color & Shape</h1>
-		<h2 class="text-lg md:text-xl lg:text-3xl pb-1 lg:pb-4">
-			Fast passed hyper casual mobile game
-		</h2>
+		<h2 class="text-lg md:text-xl lg:text-3xl pb-1 lg:pb-4">Fast paced hyper casual mobile game</h2>
 		<p class="text-base md:text-lg lg:text-xl pb-1 lg:pb-4">
 			The goal is to press the correct color(s) and shape(s) made difficult by the <a
 				href="https://en.wikipedia.org/wiki/Stroop_effect"
