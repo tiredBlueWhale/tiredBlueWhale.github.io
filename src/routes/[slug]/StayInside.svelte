@@ -1,6 +1,5 @@
 <script>
-	import { UnderConstruction } from '$lib/components';
-	import { SectionScroll } from '$lib/components/sections';
+	import { UnderConstruction, SectionScroll } from '$lib/components';
 
 	import { base } from '$app/paths';
 </script>

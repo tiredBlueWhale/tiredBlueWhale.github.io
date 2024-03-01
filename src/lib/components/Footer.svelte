@@ -1,5 +1,5 @@
 <script>
-	import { Section } from '$lib/components/sections';
+	import { Section } from '$lib/components';
 
 	import water from '$lib/images/tired-blue-whale-water.png';
 

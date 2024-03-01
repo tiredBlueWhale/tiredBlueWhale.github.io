@@ -1,5 +1,5 @@
 <script>
-	import { SectionScroll } from '$lib/components/sections';
+	import { SectionScroll } from '$lib/components';
 
 	/** @type {import('./$types').PageData} */
 	export let data;

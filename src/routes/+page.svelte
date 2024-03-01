@@ -8,9 +8,16 @@
 
 	import { base } from '$app/paths';
 
-	import { Hero, Download } from '$lib/components';
-	import { Section, SectionContent } from '$lib/components/sections';
-	import { Android, IPhone, Laptop } from '$lib/components/devices';
+	import {
+		AppleBadge,
+		AndroidBadge,
+		Hero,
+		Section,
+		SectionContent,
+		Android,
+		IPhone,
+		Laptop
+	} from '$lib/components';
 </script>
 
 <svelte:head>
@@ -32,10 +39,12 @@
 		</p>
 		<a class="text-base md:text-lg lg:text-xl pb-2 lg:pb-8" href="{base}/stay-inside">Learn More</a>
 		<div class="grow-[.1]" />
-		<Download
-			apple="https://apps.apple.com/us/app/stayinside/id6477404555"
-			android="https://play.google.com/store/apps/details?id=com.tiredbluewhale.stayinside"
-		/>
+		<div class="flex flex-wrap gap-2 lg:gap-4 pb-2">
+			<AppleBadge href="https://apps.apple.com/us/app/stayinside/id6477404555" />
+			<AndroidBadge
+				href="https://play.google.com/store/apps/details?id=com.tiredbluewhale.stayinside"
+			/>
+		</div>
 		<div class="flex-1 md:grow-[1.6]" />
 		<div class="flex gap-4">
 			<a class="text-sm lg:text-base" href="{base}/stay-inside/privacy">Privacy Policy </a>
@@ -70,7 +79,12 @@
 		</a>
 		<div class="grow-[.1]" />
 		<h3 class="text-lg md:text-xl lg:text-3xl pb-1 lg:pb-4">March 2024</h3>
-		<!-- <Download apple="http" android="asdjfkajfs" /> -->
+		<!-- <div class="flex flex-wrap gap-2 lg:gap-4 pb-2">
+			<AppleBadge href="https://apps.apple.com/us/app/stayinside/id6477404555" />
+			<AndroidBadge
+				href="https://play.google.com/store/apps/details?id=com.tiredbluewhale.stayinside"
+			/>
+		</div> -->
 		<div class="flex-1 md:grow-[1.6]" />
 		<div class="flex gap-4">
 			<a class="text-sm lg:text-base" href="{base}/color-and-shape/privacy">Privacy Policy </a>
@@ -97,8 +111,10 @@
 		</p>
 		<a class="text-sm md:text-base lg:text-lg pb-2 lg:pb-8" href="{base}/tobi-2-go">Learn More </a>
 		<div class="grow-[.1]" />
-		<h3 class="text-lg md:text-xl lg:text-3xl pb-1 lg:pb-4">February 2024</h3>
-		<!-- <Download apple="http" android="asdjfkajfs" /> -->
+		<div class="flex flex-wrap gap-2 lg:gap-4 pb-2">
+			<AppleBadge href="https://apps.apple.com/us/app/tobi2go/id6478235341" />
+			<!-- <AndroidBadge href="https://play.google.com/apps/internaltest/4701641990347214931" /> -->
+		</div>
 		<div class="flex-1 md:grow-[1.6]" />
 		<div class="flex gap-4">
 			<a class="text-sm lg:text-base" href="{base}/tobi-2-go/privacy">Privacy Policy </a>

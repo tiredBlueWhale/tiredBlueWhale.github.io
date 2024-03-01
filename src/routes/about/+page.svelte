@@ -1,5 +1,5 @@
 <script>
-	import { SectionScroll } from '$lib/components/sections';
+	import { SectionScroll } from '$lib/components';
 </script>
 
 <SectionScroll title="About" color="bg-blue-700">
