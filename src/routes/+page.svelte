@@ -113,7 +113,9 @@
 		<div class="grow-[.1]" />
 		<div class="flex flex-wrap gap-2 lg:gap-4 pb-2">
 			<AppleBadge href="https://apps.apple.com/us/app/tobi2go/id6478235341" />
-			<!-- <AndroidBadge href="https://play.google.com/apps/internaltest/4701641990347214931" /> -->
+			<AndroidBadge
+				href="https://play.google.com/store/apps/details?id=com.tiredbluewhale.tobigo"
+			/>
 		</div>
 		<div class="flex-1 md:grow-[1.6]" />
 		<div class="flex gap-4">
