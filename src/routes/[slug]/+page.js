@@ -17,7 +17,7 @@ export const prerender = true;
 /**
  * @param {string} slug
  */
-function getComponent(slug) {
+export function getComponent(slug) {
     switch (slug) {
         case 'stay-inside':
             return StayInside;
@@ -32,9 +32,6 @@ function getComponent(slug) {
 
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {
-
     const component = getComponent(params.slug);
-    if (component !== null) {
-        return { component };
-    }
+    return { component };
 }
