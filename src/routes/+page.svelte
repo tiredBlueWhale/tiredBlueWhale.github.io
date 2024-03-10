@@ -1,16 +1,7 @@
 <script>
 	import { Hero, Section } from '$lib/components';
-	import { getComponent } from '$lib/page';
+	import { StayInside, ColorAndShape, Tobi2Go } from '$lib/pages';
 	import { PATHS } from '$lib/paths';
-
-	const sections = Object.entries(PATHS)
-		.filter(([_, params]) => params.paths.includes('detail'))
-		.map(([key, params], index) => ({
-			sectionId: key,
-			component: getComponent(key),
-			zIndex: `z-[${9 - index}]`,
-			...params
-		}));
 </script>
 
 <svelte:head>
@@ -19,8 +10,12 @@
 </svelte:head>
 
 <Hero />
-{#each sections as { sectionId, zIndex, bgColor, component }}
-	<Section {sectionId} {zIndex} {bgColor}>
-		<svelte:component this={component} />
-	</Section>
-{/each}
+<Section sectionId="stay-inside" zIndex="z-[9]" bgColor={PATHS['stay-inside'].bgColor}>
+	<StayInside />
+</Section>
+<Section sectionId="color-and-shape" zIndex="z-[8]" bgColor={PATHS['color-and-shape'].bgColor}>
+	<ColorAndShape />
+</Section>
+<Section sectionId="tobi-2-go" zIndex="z-[7]" bgColor={PATHS['tobi-2-go'].bgColor}>
+	<Tobi2Go />
+</Section>
