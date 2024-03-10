@@ -2,6 +2,8 @@
 	import { Hero, Section } from '$lib/components';
 	import { StayInside, ColorAndShape, Tobi2Go } from '$lib/pages';
 	import { PATHS } from '$lib/paths';
+
+	// Cant use {#each}, probably because of the zIndex and scroll listener
 </script>
 
 <svelte:head>
