@@ -11,11 +11,6 @@ export const prerender = true;
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {
 
-    // const component = getComponent(params.slug);
-    // if (component !== null) {
-    //     return { component };
-    // }
-
     switch (params.slug) {
         case 'stay-inside':
             return {

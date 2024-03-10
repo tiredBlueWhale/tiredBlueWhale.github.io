@@ -1,7 +1,9 @@
 <script>
+	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
+
 	import { getOperatingSystem } from '$lib/agent';
 
-	import { onMount } from 'svelte';
 	/** @type {import('./$types').PageData} */
 	export let data;
 
@@ -39,12 +41,20 @@
 	}
 
 	onMount(() => {
+		const isRedirect = $page.url.searchParams.get('redirect');
 		const redirectUrl = getRedirectUrl(data.slug);
-		if (redirectUrl !== '') {
+		if (isRedirect === 'true' && redirectUrl !== '') {
 			// @ts-ignore
 			window.location = redirectUrl;
 		}
 	});
 </script>
 
-<svelte:component this={data.component} />
+<svelte:head>
+	<title>Tired Blue Whale</title>
+	<meta name="description" content="Tired Blue Whale" />
+</svelte:head>
+
+<section class="min-h-screen flex justify-center items-center {data.color}">
+	<svelte:component this={data.component} />
+</section>
