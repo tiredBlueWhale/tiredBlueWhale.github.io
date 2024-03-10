@@ -55,6 +55,6 @@
 	<meta name="description" content="Tired Blue Whale" />
 </svelte:head>
 
-<section class="min-h-screen flex justify-center items-center {data.color}">
+<section class="min-h-screen flex justify-center items-center {data.bgColor}">
 	<svelte:component this={data.component} />
 </section>

@@ -5,8 +5,8 @@ import { PATHS } from './src/lib/paths.js'
 // const dev = process.argv.includes('dev');
 
 const storeURLs = Object.entries(PATHS)
-	.filter(([key, params]) => params.paths.includes("store"))
-	.map(([key, params]) => `${key}/store`)
+	.filter(([_, params]) => params.paths.includes("store"))
+	.map(([key]) => `/${key}/store`)
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

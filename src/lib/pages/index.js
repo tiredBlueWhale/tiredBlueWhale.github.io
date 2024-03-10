@@ -1,3 +1,5 @@
+export { default as ErrorPage } from "./ErrorPage.svelte"
+
 export { default as StayInside } from "./StayInside.svelte"
 export { default as StayInsideDetail } from "./StayInsideDetail.svelte"
 export { default as ColorAndShape } from "./ColorAndShape.svelte"

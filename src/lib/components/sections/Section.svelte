@@ -1,7 +1,7 @@
 <script>
 	export let sectionId = '';
 	export let zIndex = 'z-0';
-	export let color = 'bg-hero';
+	export let bgColor = 'bg-hero';
 
 	/**
 	 * @type {number}
@@ -34,10 +34,10 @@
 	bind:this={section}
 >
 	<div
-		class="absolute top-0 right-0 left-0 h-screen transition-[height] duration-75 ease-linear {color}"
+		class="absolute top-0 right-0 left-0 h-screen transition-[height] duration-75 ease-linear {bgColor}"
 	>
 		<slot />
 	</div>
 </section>
 
-<div id={sectionId} class="h-section-placeholder {color}" bind:this={sectionPlaceholder} />
+<div id={sectionId} class="h-section-placeholder {bgColor}" bind:this={sectionPlaceholder} />

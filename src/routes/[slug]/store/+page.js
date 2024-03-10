@@ -1,5 +1,5 @@
-import { StayInside, ColorAndShape, Tobi2Go } from '$lib/pages';
-import errorPage from '../../+error.svelte'
+import { getComponent } from '$lib/page';
+import { PATHS } from '$lib/paths';
 
 // we don't need any JS on this page, though we'll load
 // it in dev so that we get hot module replacement
@@ -9,26 +9,12 @@ import errorPage from '../../+error.svelte'
 // it so that it gets served as a static asset in production
 export const prerender = true;
 
-/**
- * @param {string} slug
- */
-function getComponent(slug) {
-    switch (slug) {
-        case 'stay-inside':
-            return { component: StayInside, color: "bg-stay-inside" };
-        case 'color-and-shape':
-            return { component: ColorAndShape, color: "bg-color-and-shape" };
-        case 'tobi-2-go':
-            return { component: Tobi2Go, color: "bg-lime-700" };
-        default:
-            return { component: errorPage, color: "" };
-    };
-}
-
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {
     return {
         slug: params.slug,
-        ...getComponent(params.slug)
+        component: getComponent(params.slug),
+        // @ts-ignore
+        bgColor: PATHS[params.slug].bgColor
     }
 }
