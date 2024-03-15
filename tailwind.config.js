@@ -11,7 +11,8 @@ export default {
         hero: '#0148ca',
         'stay-inside': '#601aaf',
         'stay-inside-shadow': '#1aafaa',
-        'color-and-shape': '#082f49'
+        'color-and-shape': '#082f49',
+        'tobi-2-go': '#599416',
       },
       fontFamily: {
         'sans': ['Fira-Mono', ...defaultTheme.fontFamily.sans],

@@ -28,7 +28,7 @@ export const PATHS = {
     'tobi-2-go': {
         title: 'Tobi2Go',
         fontFamily: "font-press-start-2p",
-        bgColor: "bg-lime-700",
+        bgColor: "bg-tobi-2-go",
         paths: [...applicationSlugs]
     },
 }

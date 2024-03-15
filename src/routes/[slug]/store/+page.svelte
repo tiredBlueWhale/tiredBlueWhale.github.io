@@ -16,24 +16,24 @@
 		switch (slug) {
 			case 'stay-inside':
 				switch (operatingSystem) {
-					case 'iOS':
-						return 'https://apps.apple.com/us/app/stayinside/id6477404555';
-					default:
+					case 'Android':
 						return 'https://play.google.com/store/apps/details?id=com.tiredbluewhale.stayinside';
+					default:
+						return 'https://apps.apple.com/us/app/stayinside/id6477404555';
 				}
 			case 'color-and-shape':
 				switch (operatingSystem) {
-					case 'iOS':
+					case 'Android':
 						return '';
 					default:
 						return '';
 				}
 			case 'tobi-2-go':
 				switch (operatingSystem) {
-					case 'iOS':
-						return 'https://apps.apple.com/us/app/tobi2go/id6478235341';
-					default:
+					case 'Android':
 						return 'https://play.google.com/store/apps/details?id=com.tiredbluewhale.tobigo';
+					default:
+						return 'https://apps.apple.com/us/app/tobi2go/id6478235341';
 				}
 			default:
 				return '';
