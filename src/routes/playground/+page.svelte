@@ -21,6 +21,7 @@
 		let _content = $page.url.searchParams.get('content') || '[Content1,Content 2 asdf]';
 
 		_content = _content.replace(/'/g, '');
+		_content = _content.replace(/\s/g, ' ');
 		const _contentMatch = /\[(.*?)\]/.exec(_content);
 		if (_contentMatch !== null && _contentMatch.length >= 1) {
 			content = _contentMatch[1].split(',');
@@ -29,7 +30,6 @@
 		let numberOfWords = 0;
 		for (const entry of content) {
 			numberOfWords += entry.split(' ').length;
-			console.log(numberOfWords);
 		}
 
 		readingSpeed = parseFloat($page.url.searchParams.get('readingSpeed') || '1.2');
