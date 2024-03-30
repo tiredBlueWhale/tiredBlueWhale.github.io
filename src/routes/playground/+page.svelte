@@ -54,11 +54,11 @@
 	</h1>
 	<div bind:this={scrollContainer} class="pb-4 flex flex-row font-press-start-2p">
 		{#each content as entry}
-			<h2
-				class="flex-1 px-8 text-nowrap text-2xl md:text-4xl lg:text-7xl text-red-600 text-shadow-neon shadow-red-700"
+			<div
+				class="flex-1 px-8 text-nowrap text-center text-2xl md:text-4xl lg:text-7xl text-red-600 text-shadow-neon shadow-red-700"
 			>
 				{entry}
-			</h2>
+			</div>
 		{/each}
 	</div>
 
