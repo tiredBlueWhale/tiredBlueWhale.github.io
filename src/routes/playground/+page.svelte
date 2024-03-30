@@ -52,7 +52,7 @@
 	<h1 class="pb-4 text-6xl md:text-7xl lg:text-9xl font-martian font-bold text-center">
 		{title}
 	</h1>
-	<div bind:this={scrollContainer} class="pb-4 flex flex-row">
+	<div bind:this={scrollContainer} class="pb-4 flex flex-row font-press-start-2p">
 		{#each content as entry}
 			<div
 				class="px-8 text-nowrap text-center text-2xl md:text-4xl lg:text-7xl text-red-600 text-shadow-neon shadow-red-700"
