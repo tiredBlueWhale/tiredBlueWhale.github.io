@@ -37,14 +37,11 @@
 		}
 
 		readingSpeed = parseFloat($page.url.searchParams.get('readingSpeed') || '1.2');
-		scrollContainer.animate(
-			[{ transform: 'translate(0%,-50%)' }, { transform: 'translate(-50%, -50%)' }],
-			{
-				duration: numberOfWords * readingSpeed * 1000,
-				easing: 'linear',
-				iterations: Infinity
-			}
-		);
+		scrollContainer.animate([{ transform: 'translateX(0%)' }, { transform: 'translateX(-50%)' }], {
+			duration: numberOfWords * readingSpeed * 1000,
+			easing: 'linear',
+			iterations: Infinity
+		});
 		content = [...content, ...content];
 
 		phone = $page.url.searchParams.get('phone') || '';
@@ -52,24 +49,21 @@
 </script>
 
 <section class="h-screen flex flex-col justify-center items-center bg-gray-900">
-	<h1 class="pb-2 text-6xl md:text-7xl lg:text-9xl font-martian font-bold text-center">{title}</h1>
-	<div class="relative w-full h-12 md:h-20">
-		<div
-			bind:this={scrollContainer}
-			class="absolute left-0 top-1/2 flex flex-row font-press-start-2p"
-		>
-			{#each content as entry}
-				<h2
-					class="flex-1 px-8 text-nowrap text-2xl md:text-4xl lg:text-7xl text-red-600 text-shadow-neon shadow-red-700"
-				>
-					{entry}
-				</h2>
-			{/each}
-		</div>
+	<h1 class="pb-4 text-6xl md:text-7xl lg:text-9xl font-martian font-bold text-center">
+		{title}
+	</h1>
+	<div bind:this={scrollContainer} class="pb-4 flex flex-row font-press-start-2p">
+		{#each content as entry}
+			<h2
+				class="flex-1 px-8 text-nowrap text-2xl md:text-4xl lg:text-7xl text-red-600 text-shadow-neon shadow-red-700"
+			>
+				{entry}
+			</h2>
+		{/each}
 	</div>
 
 	{#if phone}
-		<a href="tel:+{phone}" class="pt-4 flex flex-col justify-center items-center">
+		<a href="tel:+{phone}" class="flex flex-col justify-center items-center">
 			<h3 class="text-3xl lg:text-7xl">Call: +{phone}</h3>
 		</a>
 	{/if}
