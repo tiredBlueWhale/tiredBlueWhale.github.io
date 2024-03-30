@@ -31,4 +31,10 @@ export const PATHS = {
         bgColor: "bg-tobi-2-go",
         paths: [...applicationSlugs]
     },
+    'playground': {
+        title: 'Playground',
+        fontFamily: "",
+        bgColor: "",
+        paths: [""]
+    }
 }
