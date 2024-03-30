@@ -20,8 +20,9 @@
 		title = $page.url.searchParams.get('title') || 'Title';
 		let _content = $page.url.searchParams.get('content') || '[Content1,Content 2 asdf]';
 
+		_content = decodeURI(_content);
 		_content = _content.replace(/'/g, '');
-		_content = _content.replace(/\s/g, ' ');
+		// _content = _content.replace(/\s/g, ' ');
 		const _contentMatch = /\[(.*?)\]/.exec(_content);
 		if (_contentMatch !== null && _contentMatch.length >= 1) {
 			content = _contentMatch[1].split(',');
