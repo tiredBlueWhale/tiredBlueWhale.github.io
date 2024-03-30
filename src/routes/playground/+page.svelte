@@ -19,12 +19,13 @@
 	onMount(() => {
 		let _title = $page.url.searchParams.get('title') || 'Title';
 		// Safari iOS does not work other way
-		title = _title.replace(/%20/g, ' ');
+		title = decodeURI(_title);
 
 		let _content = $page.url.searchParams.get('content') || '[Content1,Content 2 asdf]';
 		_content = _content.replace(/'/g, '');
 		// Safari iOS does not work other way
-		_content = _content.replace(/%20/g, ' ');
+		_content = decodeURI(_content);
+		console.log(_content);
 		const _contentMatch = /\[(.*?)\]/.exec(_content);
 		if (_contentMatch !== null && _contentMatch.length >= 1) {
 			content = _contentMatch[1].split(',');
@@ -52,7 +53,7 @@
 
 <section class="h-screen flex flex-col justify-center items-center bg-gray-900">
 	<h1 class="pb-2 text-6xl md:text-7xl lg:text-9xl font-martian font-bold text-center">{title}</h1>
-	<div class="relative overflow-hidden w-full h-12 md:h-20">
+	<div class="relative w-full h-12 md:h-20">
 		<div
 			bind:this={scrollContainer}
 			class="absolute left-0 top-1/2 flex flex-row font-press-start-2p"
