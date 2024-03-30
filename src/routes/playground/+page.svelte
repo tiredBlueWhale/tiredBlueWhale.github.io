@@ -11,16 +11,15 @@
 	let title;
 	/** @type {string[]} */
 	let content = [];
-	/** @type {string} */
-	let phone;
 	/** @type {number} */
 	let readingSpeed;
+	/** @type {string} */
+	let phone;
 
 	onMount(() => {
 		title = $page.url.searchParams.get('title') || 'Title';
 		let _content = $page.url.searchParams.get('content') || '[Content1,Content 2 asdf]';
 
-		// _content = _content.replace(/,\s/g, ',');
 		_content = _content.replace(/'/g, '');
 		const _contentMatch = /\[(.*?)\]/.exec(_content);
 		if (_contentMatch !== null && _contentMatch.length >= 1) {
@@ -42,8 +41,9 @@
 				iterations: Infinity
 			}
 		);
-
 		content = [...content, ...content];
+
+		phone = $page.url.searchParams.get('phone') || '';
 	});
 </script>
 
