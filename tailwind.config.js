@@ -60,13 +60,12 @@ export default {
       },
       textShadow: {
         DEFAULT: '6px 6px 0px var(--tw-shadow-color)',
+        // https://css-tricks.com/how-to-create-neon-text-with-css/
         neon: `
         0 0 7px var(--tw-shadow-color),
         0 0 10px var(--tw-shadow-color),
         0 0 21px var(--tw-shadow-color);
         `
-
-        // 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;',
       },
     },
   },
