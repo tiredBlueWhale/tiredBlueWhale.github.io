@@ -17,12 +17,14 @@
 	let phone;
 
 	onMount(() => {
-		title = $page.url.searchParams.get('title') || 'Title';
-		let _content = $page.url.searchParams.get('content') || '[Content1,Content 2 asdf]';
+		let _title = $page.url.searchParams.get('title') || 'Title';
+		// Safari iOS does not work other way
+		title = _title.replace(/%20/g, ' ');
 
-		_content = decodeURI(_content);
+		let _content = $page.url.searchParams.get('content') || '[Content1,Content 2 asdf]';
 		_content = _content.replace(/'/g, '');
-		// _content = _content.replace(/\s/g, ' ');
+		// Safari iOS does not work other way
+		_content = _content.replace(/%20/g, ' ');
 		const _contentMatch = /\[(.*?)\]/.exec(_content);
 		if (_contentMatch !== null && _contentMatch.length >= 1) {
 			content = _contentMatch[1].split(',');
