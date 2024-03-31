@@ -11,7 +11,7 @@
 	let scrollContainer;
 
 	/** @type {string} */
-	let title;
+	let title = '¯_(ツ)_/¯';
 	/** @type {string[]} */
 	let content = [];
 	/** @type {number} */
@@ -45,7 +45,8 @@
 		scrollContainer.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-50%)' }], {
 			duration: numberOfWords * readingSpeed * 1000,
 			easing: 'linear',
-			iterations: Infinity
+			iterations: Infinity,
+			delay: 200
 		});
 		content = [...content, ...content, ...content, ...content];
 
