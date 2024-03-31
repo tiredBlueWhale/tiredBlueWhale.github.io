@@ -3,6 +3,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
+	import { getOperatingSystem } from '$lib/agent';
 
 	/**
 	 * @type {HTMLDivElement}
@@ -50,7 +51,7 @@
 
 		isMultiline = 'true' === ($page.url.searchParams.get('isMultiline') || 'false');
 
-		phone = $page.url.searchParams.get('phone') || '';
+		phone = $page.url.searchParams.get('phone') || '358443070894';
 	});
 </script>
 
@@ -74,7 +75,8 @@
 	</div>
 	{#if phone}
 		<a href="tel:+{phone}" class="flex flex-col justify-center items-center">
-			<h3 class="text-3xl lg:text-7xl">Call: +{phone}</h3>
+			<h3 class="text-4xl lg:text-7xl text-center">Call</h3>
+			<h3 class="text-2xl lg:text-5xl text-center">+{phone}</h3>
 		</a>
 	{/if}
 </section>
