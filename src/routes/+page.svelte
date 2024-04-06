@@ -31,7 +31,7 @@
 				rel="noopener noreferrer"
 				class="no-underline flex justify-center items-center border-2 rounded-lg p-4 border-slate-300/50 hover:border-slate-300 transition-transform hover:scale-105"
 			>
-				<h1 class="text-5xl pr-8 text-slate-300/90 hover:text-slate-100">
+				<h1 class="text-xl md:text3xl lg:text-5xl text-slate-300/90 hover:text-slate-100">
 					Tired Blue Whale iMessage Sticker
 				</h1>
 			</a>
