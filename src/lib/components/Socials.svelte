@@ -1,8 +1,8 @@
 <script>
-	const svgClass = 'w-16 h-16 text-white hover:scale-110';
+	const svgClass = 'w-8 h-8 md:w-16 md:h-16 text-white hover:scale-110';
 </script>
 
-<div class="flex justify-center gap-8 *:transition-transform">
+<div class="flex flex-wrap justify-center gap-8 *:transition-transform">
 	<a href="mailto: tired.blue.whale@gmail.com">
 		<svg
 			class={svgClass}
