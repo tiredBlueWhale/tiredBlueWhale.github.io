@@ -24,9 +24,9 @@
 			case 'color-and-shape':
 				switch (operatingSystem) {
 					case 'Android':
-						return '';
+						return 'https://play.google.com/store/apps/details?id=com.tiredbluewhale.colorshape';
 					default:
-						return '';
+						return 'https://apps.apple.com/us/app/stayinside/id6479221105';
 				}
 			case 'tobi-2-go':
 				switch (operatingSystem) {

@@ -21,13 +21,12 @@
 		>Learn More
 	</a>
 	<div class="grow-[.1]" />
-	<h3 class="text-lg md:text-xl lg:text-3xl pb-1 lg:pb-4">March 2024</h3>
-	<!-- <div class="flex flex-wrap gap-2 lg:gap-4 pb-2">
-        <AppleBadge href="https://apps.apple.com/us/app/stayinside/id6477404555" />
-        <AndroidBadge
-            href="https://play.google.com/store/apps/details?id=com.tiredbluewhale.stayinside"
-        />
-    </div> -->
+	<div class="flex flex-wrap gap-2 lg:gap-4 pb-2">
+		<AppleBadge href="https://apps.apple.com/us/app/stayinside/id6479221105" />
+		<AndroidBadge
+			href="https://play.google.com/store/apps/details?id=com.tiredbluewhale.colorshape"
+		/>
+	</div>
 	<div class="flex-1 md:grow-[1.6]" />
 	<div class="flex gap-4">
 		<a class="text-sm lg:text-base" href="{base}/color-and-shape/privacy">Privacy Policy </a>
