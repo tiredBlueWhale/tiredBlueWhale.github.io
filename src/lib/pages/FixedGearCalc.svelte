@@ -2,21 +2,21 @@
 	import { base } from '$app/paths';
 	import { Android, AndroidBadge, AppleBadge, IPhone, SectionContent } from '$lib/components';
 	import { PATHS } from '$lib/paths';
-	import tobi2goiOS from '$lib/images/tobi-2-go-ios.png';
-	import tobi2goAndroid from '$lib/images/tobi-2-go-android.png';
+	import fixedGearCalciOS from '$lib/images/fixed-gear-calc-ios.png';
+	import fixedGearCalcAndroid from '$lib/images/fixed-gear-calc-android.png';
 
-	const content = PATHS['tobi-2-go'];
+	const content = PATHS['fixed-gear-calc'];
 	const slug = `${base}/${content.slug}`;
 </script>
 
-<SectionContent fontFamily="font-press-start-2p">
+<SectionContent fontFamily={content.fontFamily}>
 	<div class="md:flex-1" />
-	<span class="text-xs md:text-base lg:text-base md:pb-1">Utility</span>
-	<h1 class="text-3xl md:text-5xl lg:text-7xl md:pb-2">Tobi2Go</h1>
-	<h2 class="text-lg md:text-xl lg:text-3xl pb-1 lg:pb-4">Feel good app</h2>
-	<p class="text-xs md:text-sm lg:text-base pb-1 lg:pb-4">
-		Feeling down? In need of motivation? Look no further, press one of the many buttons and get your
-		daily dose of encouragement.
+	<span class="text-xs md:text-base lg:text-base">Utility</span>
+	<h1 class="text-3xl md:text-5xl lg:text-7xl md:pb-1 font-bold">{content.title}</h1>
+	<h2 class="text-lg md:text-xl lg:text-3xl pb-1 lg:pb-4">Get your skit patch and ratio</h2>
+	<p class="text-base md:text-lg lg:text-xl pb-1 lg:pb-4">
+		Figure out your optimal setup for your fixed gear or track bike. Get your skit patch, ratio, or
+		the cadence needed for your desired speed.
 	</p>
 	<a class="text-base md:text-lg lg:text-xl pb-2 lg:pb-8" href={slug}>Learn More</a>
 	<div class="grow-[.1]" />
@@ -30,12 +30,12 @@
 	</div>
 	<div slot="device" class="relative flex flex-row">
 		<div class="translate-x-2 md:translate-x-0 -translate-y-2 md:translate-y-4 lg:translate-y-8">
-			<Android src={tobi2goAndroid} />
+			<Android src={fixedGearCalcAndroid} isNative />
 		</div>
 		<div
 			class="-translate-x-2 md:-translate-x-4 lg:-translate-x-8 translate-y-2 md:-translate-y-4 lg:-translate-y-8 z-10"
 		>
-			<IPhone src={tobi2goiOS} />
+			<IPhone src={fixedGearCalciOS} isNative />
 		</div>
 	</div>
 </SectionContent>

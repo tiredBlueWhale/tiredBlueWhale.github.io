@@ -5,6 +5,8 @@
 	import { PATHS } from '$lib/paths';
 	import { hydrated } from '$lib/hydrated';
 
+	const items = Object.values(PATHS).filter((path) => path.showInHeader);
+
 	let introAnimation = 'animate-intro';
 	if (hydrated || $page.route.id !== '/') {
 		introAnimation = '';
@@ -36,13 +38,13 @@
 				>
 			</div>
 			<nav class="flex flex-col justify-center group xl:p-8">
-				{#each Object.entries(PATHS) as [path, { title, fontFamily }]}
+				{#each items as { slug, title, fontFamily }}
 					<a
-						class="text-3xl md:text-6xl xl:text-2xl no-underline p-2 md:p-4 text-center xl:text-right {fontFamily} {path !==
+						class="text-3xl md:text-6xl xl:text-2xl no-underline p-2 md:p-4 text-center xl:text-right {fontFamily} {slug !==
 						''
 							? 'border-t-2 border-neutral-200 xl:opacity-0 group-hover:opacity-100'
 							: ''} text-neutral-200 hover:text-neutral-50 border-neutral-200 transition-[opacity] duration-150 ease-in"
-						href="{base}/{path}"
+						href="{base}/{slug}"
 						on:click={onLinkClick}
 					>
 						{title}

@@ -4,9 +4,9 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { PATHS } from './src/lib/paths.js'
 // const dev = process.argv.includes('dev');
 
-const storeURLs = Object.entries(PATHS)
-	.filter(([_, params]) => params.paths.includes("store"))
-	.map(([key]) => `/${key}/store`)
+const storeURLs = Object.values(PATHS)
+	.filter(({ paths }) => paths.includes("store"))
+	.map(({ slug }) => `/${slug}/store`)
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

@@ -11,10 +11,16 @@ export const prerender = true;
 
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {
+
+    // @ts-ignore
+    const content = PATHS[params.slug]
+
     return {
         slug: params.slug,
         component: getComponent(params.slug),
-        // @ts-ignore
-        bgColor: PATHS[params.slug].bgColor
+        bgColor: content.bgColor,
+        apple: content.apple,
+        android: content.android
+
     }
 }

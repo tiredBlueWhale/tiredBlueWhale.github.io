@@ -11,6 +11,8 @@ export function getComponent(slug) {
             return ColorAndShape;
         case 'tobi-2-go':
             return Tobi2Go;
+        case 'fixed-gear-calc':
+            return Tobi2Go;
         default:
             return ErrorPage;
     };
@@ -28,6 +30,8 @@ export function getDetailComponent(slug) {
             return ColorAndShapeDetail;
         case 'tobi-2-go':
             return Tobi2GoDetail;
+        case 'fixed-gear-calc':
+            return ErrorPage;
         default:
             return ErrorPage;
     };

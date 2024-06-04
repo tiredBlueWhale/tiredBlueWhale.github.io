@@ -3,17 +3,20 @@
 
 	export let src = stayInside;
 	export let landscape = false;
+	export let isNative = false;
 </script>
 
 <div
 	class="relative border-[7px] md:border-[9px] lg:border-[14px] rounded-[1.25rem] lg:rounded-[2.5rem] border-gray-800 bg-gray-800"
 >
 	<!-- Island Top -->
-	<div
-		class="absolute rounded-[2rem] bg-gray-800 {landscape
-			? 'h-[24%] w-[4%] left-[1.5%] top-1/2 -translate-y-1/2'
-			: 'h-[4%] w-[24%] top-[1.5%] left-1/2 -translate-x-1/2'}"
-	/>
+	{#if !isNative}
+		<div
+			class="absolute rounded-[2rem] bg-gray-800 {landscape
+				? 'h-[24%] w-[4%] left-[1.5%] top-1/2 -translate-y-1/2'
+				: 'h-[4%] w-[24%] top-[1.5%] left-1/2 -translate-x-1/2'}"
+		/>
+	{/if}
 	<!-- Silent switch -->
 	<div
 		class="absolute rounded-l-lg bg-gray-800 {landscape
@@ -42,8 +45,8 @@
 		<img
 			{src}
 			class="object-cover {landscape
-				? 'aspect-[19/9] w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] 2xl:w-[700px]'
-				: 'aspect-[9/19] w-[150px] md:w-[200px] lg:w-[250px] xl:w-[300px] 2xl:w-[350px]'} "
+				? `${isNative ? 'aspect-[20/9]' : 'aspect-[19/9]'} w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] 2xl:w-[700px]`
+				: `${isNative ? 'aspect-[9/20]' : 'aspect-[9/19]'} w-[150px] md:w-[200px] lg:w-[250px] xl:w-[300px] 2xl:w-[350px]`} "
 			alt="iPhone"
 		/>
 	</div>

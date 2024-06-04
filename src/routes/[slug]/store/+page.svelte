@@ -7,42 +7,14 @@
 	/** @type {import('./$types').PageData} */
 	export let data;
 
-	/**
-	 * @param {string} slug
-	 */
-	function getRedirectUrl(slug) {
-		const operatingSystem = getOperatingSystem();
-
-		switch (slug) {
-			case 'stay-inside':
-				switch (operatingSystem) {
-					case 'Android':
-						return 'https://play.google.com/store/apps/details?id=com.tiredbluewhale.stayinside';
-					default:
-						return 'https://apps.apple.com/us/app/stayinside/id6477404555';
-				}
-			case 'color-and-shape':
-				switch (operatingSystem) {
-					case 'Android':
-						return 'https://play.google.com/store/apps/details?id=com.tiredbluewhale.colorshape';
-					default:
-						return 'https://apps.apple.com/us/app/stayinside/id6479221105';
-				}
-			case 'tobi-2-go':
-				switch (operatingSystem) {
-					case 'Android':
-						return 'https://play.google.com/store/apps/details?id=com.tiredbluewhale.tobigo';
-					default:
-						return 'https://apps.apple.com/us/app/tobi2go/id6478235341';
-				}
-			default:
-				return '';
-		}
-	}
-
 	onMount(() => {
+		const operatingSystem = getOperatingSystem();
 		const isRedirect = $page.url.searchParams.get('redirect');
-		const redirectUrl = getRedirectUrl(data.slug);
+		let redirectUrl = data.apple;
+		if (operatingSystem === 'Android') {
+			redirectUrl = data.android;
+		}
+
 		if (isRedirect === 'true' && redirectUrl !== '') {
 			// @ts-ignore
 			window.location = redirectUrl;

@@ -1,23 +1,11 @@
 <script>
+	import { PATHS } from '$lib/paths';
 	import Socials from './Socials.svelte';
 
 	export let showApps = true;
 	export let showSocials = true;
 
-	const apps = [
-		{
-			title: 'StayInside',
-			href: 'stay-inside/store?redirect=true'
-		},
-		// {
-		//     title: "Color&Shape",
-		//     href: "color-and-shape/store?redirect=true"
-		// },
-		{
-			title: 'Tobi2Go',
-			href: 'tobi-2-go/store?redirect=true'
-		}
-	];
+	const apps = Object.values(PATHS).filter((path) => path.paths.includes('store'));
 
 	const aClass =
 		'no-underline flex flex-col justify-center items-center hover:border-slate-300 hover:scale-110';
@@ -30,8 +18,13 @@
 		class="flex-1 flex flex-col justify-center items-stretch text-xl md:text3xl lg:text-5xl text-slate-300/90 *:border-y-2 *:p-4 *:border-slate-300/50 *: *:transition-transform"
 	>
 		{#if showApps}
-			{#each apps as { title, href }}
-				<a {href} target="_blank" rel="noopener noreferrer" class={aClass}>
+			{#each apps as { title, slug }}
+				<a
+					href="{slug}/store?redirect=true"
+					target="_blank"
+					rel="noopener noreferrer"
+					class={aClass}
+				>
 					<h1 class={textClass}>{title}</h1>
 				</a>
 			{/each}
