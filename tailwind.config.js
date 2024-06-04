@@ -20,6 +20,7 @@ export default {
         'martian': ['Martian-Mono', 'sans-serif'],
         'audiowide': ['Audiowide', 'sans-serif'],
         'press-start-2p': ['"Press Start 2P"'],
+        'sf-pro': ['"Source Sans Pro"', 'normal'],
       },
       height: {
         screen: ['100vh /* fallback for Opera, IE and etc. */', '100dvh'],
