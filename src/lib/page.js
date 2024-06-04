@@ -1,4 +1,4 @@
-import { StayInsideDetail, ColorAndShapeDetail, Tobi2GoDetail, ErrorPage, ColorAndShape, StayInside, Tobi2Go } from "./pages";
+import { StayInsideDetail, ColorAndShapeDetail, Tobi2GoDetail, ErrorPage, ColorAndShape, StayInside, Tobi2Go, FixedGearCalc } from "./pages";
 
 /**
  * @param {string} slug
@@ -12,7 +12,7 @@ export function getComponent(slug) {
         case 'tobi-2-go':
             return Tobi2Go;
         case 'fixed-gear-calc':
-            return Tobi2Go;
+            return FixedGearCalc;
         default:
             return ErrorPage;
     };
