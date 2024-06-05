@@ -1,5 +1,6 @@
+import { error } from '@sveltejs/kit';
 import { getComponent } from '$lib/page';
-import { PATHS } from '$lib/paths';
+import { APPLICATIONS } from '$lib/data';
 
 // we don't need any JS on this page, though we'll load
 // it in dev so that we get hot module replacement
@@ -12,15 +13,14 @@ export const prerender = true;
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {
 
-    // @ts-ignore
-    const content = PATHS[params.slug]
+    const data = Object.values(APPLICATIONS).find(({ slug }) => slug === params.slug)
+
+    if (!data)
+        error(404, 'Not found');
 
     return {
-        slug: params.slug,
-        component: getComponent(params.slug),
-        bgColor: content.bgColor,
-        apple: content.apple,
-        android: content.android
+        component: getComponent(data.slug),
+        ...data
 
     }
 }

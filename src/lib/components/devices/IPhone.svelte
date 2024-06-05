@@ -1,7 +1,7 @@
 <script>
-	import stayInside from '$lib/images/stay-inside.png';
+	import { Image } from '$lib/components';
 
-	export let src = stayInside;
+	export let image = 'stay-inside-ios';
 	export let landscape = false;
 	export let isNative = false;
 </script>
@@ -42,11 +42,19 @@
 			: 'h-[10.5%] w-[2%] -right-[6%] top-[34%]'}"
 	/>
 	<div class="rounded-[1rem] lg:rounded-[2rem] overflow-hidden w-full h-full bg-white">
-		<img
-			{src}
-			class="object-cover {landscape
-				? `${isNative ? 'aspect-[20/9]' : 'aspect-[19/9]'} w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] 2xl:w-[700px]`
-				: `${isNative ? 'aspect-[9/20]' : 'aspect-[9/19]'} w-[150px] md:w-[200px] lg:w-[250px] xl:w-[300px] 2xl:w-[350px]`} "
+		<Image
+			{image}
+			style="object-cover {landscape
+				? `${
+						isNative
+							? 'aspect-[20/9] w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] 2xl:w-[700px]'
+							: 'aspect-[19/9] w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] 2xl:w-[700px]'
+					}`
+				: `${
+						isNative
+							? 'aspect-[9/20] w-[150px] md:w-[200px] lg:w-[250px] xl:w-[300px] 2xl:w-[320px]'
+							: 'aspect-[9/19] w-[150px] md:w-[200px] lg:w-[250px] xl:w-[300px] 2xl:w-[350px]'
+					}`}"
 			alt="iPhone"
 		/>
 	</div>

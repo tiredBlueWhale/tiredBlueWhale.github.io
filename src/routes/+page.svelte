@@ -1,8 +1,7 @@
 <script>
-	import { Hero, Section } from '$lib/components';
-	import LinkTree from '$lib/components/LinkTree.svelte';
-	import { StayInside, ColorAndShape, Tobi2Go, FixedGearCalc } from '$lib/pages';
-	import { PATHS } from '$lib/paths';
+	import { Hero, Section, LinkTree, SectionHome } from '$lib/components';
+	import { APPLICATIONS } from '$lib/data';
+	import { ColorAndShape, StayInside, Tobi2Go, FixedGearCalc } from '$lib/pages';
 
 	// Cant use {#each}, probably because of the zIndex and scroll listener
 </script>
@@ -13,32 +12,28 @@
 </svelte:head>
 
 <Hero />
-<Section
-	sectionId={PATHS['stay-inside'].slug}
-	zIndex="z-[9]"
-	bgColor={PATHS['stay-inside'].bgColor}
->
-	<StayInside />
+<Section sectionId={APPLICATIONS.stayInside.slug} zIndex="z-[9]" bgColor={APPLICATIONS.stayInside.bgColor}>
+	<SectionHome>
+		<StayInside />
+	</SectionHome>
 </Section>
-<Section
-	sectionId={PATHS['color-and-shape'].slug}
-	zIndex="z-[8]"
-	bgColor={PATHS['color-and-shape'].bgColor}
->
-	<ColorAndShape />
+<Section sectionId={APPLICATIONS.colorAndShape.slug} zIndex="z-[8]" bgColor={APPLICATIONS.colorAndShape.bgColor}>
+	<SectionHome>
+		<ColorAndShape />
+	</SectionHome>
 </Section>
-<Section sectionId={PATHS['tobi-2-go'].slug} zIndex="z-[7]" bgColor={PATHS['tobi-2-go'].bgColor}>
-	<Tobi2Go />
+<Section sectionId={APPLICATIONS.tobi2Go.slug} zIndex="z-[7]" bgColor={APPLICATIONS.tobi2Go.bgColor}>
+	<SectionHome>
+		<Tobi2Go />
+	</SectionHome>
 </Section>
-<Section
-	sectionId={PATHS['fixed-gear-calc'].slug}
-	zIndex="z-[6]"
-	bgColor={PATHS['fixed-gear-calc'].bgColor}
->
-	<FixedGearCalc />
+<Section sectionId={APPLICATIONS.fixedGearCalc.slug} zIndex="z-[6]" bgColor={APPLICATIONS.fixedGearCalc.bgColor}>
+	<SectionHome>
+		<FixedGearCalc />
+	</SectionHome>
 </Section>
 <Section sectionId="random" zIndex="z-[5]" bgColor="bg-slate-950">
-	<div class="h-full flex flex-col items-stretch py-4 px-6 md:py-32 md:px-16 xl:px-52">
+	<SectionHome>
 		<LinkTree showApps={false} showSocials={false} />
-	</div>
+	</SectionHome>
 </Section>

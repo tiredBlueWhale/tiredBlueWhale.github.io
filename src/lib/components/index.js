@@ -6,6 +6,7 @@ export { default as UnderConstruction } from './UnderConstruction.svelte'
 export { default as AppleBadge } from "./AppleBadge.svelte"
 export { default as AndroidBadge } from "./AndroidBadge.svelte"
 export { default as LinkTree } from "./LinkTree.svelte"
+export { default as Image } from "./Image.svelte"
 
 export * from "./devices"
 export * from "./sections"

@@ -1,6 +1,5 @@
 <script>
 	import { hydrated } from '$lib/hydrated';
-	import logo from '$lib/images/tired-blue-whale.png';
 	import { Section } from './sections';
 	import Greeting from './Greeting.svelte';
 
@@ -25,7 +24,7 @@
 
 	function scrollDown() {
 		window.scrollTo({
-			top: outerHeight * 1.1,
+			top: outerHeight * 1.05,
 			left: 0,
 			behavior: 'smooth'
 		});
@@ -47,14 +46,16 @@
 					<div class="w-full h-1 bg-white {barAnimation}" />
 				</div>
 				<div class="overflow-clip">
-					<h2 class="text-4xl md:text-5xl lg:text-6xl px-4 py-2 text-right {subTitleAnimation}">
-						Works
-					</h2>
+					<h2 class="text-4xl md:text-5xl lg:text-6xl px-4 py-2 text-right {subTitleAnimation}">Works</h2>
 				</div>
 			</div>
 			<div class="w-8" />
 			<div class="overflow-clip">
-				<img class="h-48 md:h-64 lg:h-96 {logoAniamtion}" alt="Tired Blue Whale Logo" src={logo} />
+				<img
+					class="h-48 md:h-64 lg:h-96 {logoAniamtion}"
+					alt="Tired Blue Whale Logo"
+					src="$lib/images/tired-blue-whale.png"
+				/>
 			</div>
 			<div class="absolute right-0 -bottom-3 lg:-bottom-16 left-0 translate-y-full">
 				<Greeting />

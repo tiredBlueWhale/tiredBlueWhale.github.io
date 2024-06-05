@@ -1,8 +1,7 @@
 <script>
-	import logo from '$lib/images/tired-blue-whale.png';
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
-	import { PATHS } from '$lib/paths';
+	import { PATHS } from '$lib/data';
 	import { hydrated } from '$lib/hydrated';
 
 	const items = Object.values(PATHS).filter((path) => path.showInHeader);
@@ -34,7 +33,7 @@
 		>
 			<div class="xl:p-10 {introAnimation}">
 				<a href="{base}/">
-					<img class="hidden xl:block h-8 xl:h-16 w-8 xl:w-16" src={logo} alt="Home" /></a
+					<img class="hidden xl:block h-8 xl:h-16 w-8 xl:w-16" src="$lib/images/tired-blue-whale.png" alt="Home" /></a
 				>
 			</div>
 			<nav class="flex flex-col justify-center group xl:p-8">
@@ -53,12 +52,7 @@
 			</nav>
 		</div>
 	</div>
-	<button
-		type="button"
-		class="absolute top-8 right-4 xl:hidden"
-		aria-label="Open Navigation"
-		on:click={onButtonClick}
-	>
+	<button type="button" class="absolute top-8 right-4 xl:hidden" aria-label="Open Navigation" on:click={onButtonClick}>
 		{#if isOpen}
 			<svg
 				class="w-6 h-6 text-white"

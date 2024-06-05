@@ -1,5 +1,5 @@
 <script>
-	import { PATHS } from '$lib/paths';
+	import { PATHS } from '$lib/data';
 	import Socials from './Socials.svelte';
 
 	export let showApps = true;

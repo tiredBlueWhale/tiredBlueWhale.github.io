@@ -2,8 +2,6 @@
 	import { Section } from '$lib/components';
 	import Socials from './Socials.svelte';
 
-	import water from '$lib/images/tired-blue-whale-water.png';
-
 	const year = new Date().getFullYear();
 </script>
 
@@ -12,7 +10,7 @@
 		<img
 			class="h-48 md:h-64 lg:h-96 transition-transform hover:scale-110"
 			alt="Tired Blue Whale Logo"
-			src={water}
+			src="$lib/images/tired-blue-whale-water.png"
 		/>
 		<Socials />
 		<span class="text-white">&copy; {year} Tired Blue Whale. All rights reserved</span>

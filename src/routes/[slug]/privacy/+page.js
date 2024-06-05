@@ -1,5 +1,5 @@
-import { PATHS } from '$lib/paths';
 import { error } from '@sveltejs/kit';
+import { APPLICATIONS } from '$lib/data';
 
 // we don't need any JS on this page, though we'll load
 // it in dev so that we get hot module replacement
@@ -11,8 +11,8 @@ export const prerender = true;
 
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {
-    // @ts-ignore
-    const data = PATHS[params.slug]
+
+    const data = Object.values(APPLICATIONS).find(({ slug }) => slug === params.slug)
 
     if (!data)
         error(404, 'Not found');

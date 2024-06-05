@@ -1,7 +1,8 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { importAssets } from 'svelte-preprocess-import-assets'
 
-import { PATHS } from './src/lib/paths.js'
+import { PATHS } from './src/lib/data.js'
 // const dev = process.argv.includes('dev');
 
 const storeURLs = Object.values(PATHS)
@@ -36,7 +37,7 @@ const config = {
 		// 	base: dev ? '' : process.env.BASE_PATH,
 		// }
 	},
-	preprocess: vitePreprocess()
+	preprocess: [importAssets(), vitePreprocess(),]
 };
 
 export default config;
