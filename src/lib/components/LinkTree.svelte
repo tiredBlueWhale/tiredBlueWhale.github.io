@@ -7,8 +7,7 @@
 
 	const apps = Object.values(PATHS).filter((path) => path.paths.includes('store'));
 
-	const aClass =
-		'no-underline flex flex-col justify-center items-center hover:border-slate-300 hover:scale-110';
+	const aClass = 'no-underline flex flex-col justify-center items-center hover:border-slate-300 hover:scale-110';
 
 	const textClass = 'hover:text-slate-100';
 </script>
@@ -19,12 +18,7 @@
 	>
 		{#if showApps}
 			{#each apps as { title, slug }}
-				<a
-					href="{slug}/store?redirect=true"
-					target="_blank"
-					rel="noopener noreferrer"
-					class={aClass}
-				>
+				<a href="{slug}/store?redirect=true" target="_blank" rel="noopener noreferrer" class={aClass}>
 					<h1 class={textClass}>{title}</h1>
 				</a>
 			{/each}
@@ -38,7 +32,7 @@
 		>
 			<h1 class={textClass}>Tired Blue Whale iMessage Sticker</h1>
 		</a>
-		<a href="tired_blue_whale.wastickers" download="" class={aClass}>
+		<a href="tired_blue_whale.wastickers" download="" class="{aClass} group">
 			<h1 class={textClass}>Tired Blue Whale Whatsapp Sticker</h1>
 		</a>
 	</div>

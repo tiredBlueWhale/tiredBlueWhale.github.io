@@ -12,7 +12,7 @@
 	<meta name="description" content={title} />
 </svelte:head>
 
-<section class="min-h-screen flex justify-center p-8 lg:py-16 lg:px-32 {color}">
+<section class="min-h-screen flex justify-center py-4 px-6 md:py-32 md:px-16 xl:px-52 {color}">
 	<div class="max-w-screen-xl flex-1 flex flex-col">
 		<slot />
 	</div>
